@@ -237,7 +237,7 @@ const InputEl = React.forwardRef<
       asChild?: boolean;
       onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     }
->(({ className, type = 'text', size, hasError, asChild, ...rest }, forwardedRef) => {
+>(({ className, type = 'text', size, hasError, asChild, autoComplete, name, ...rest }, forwardedRef) => {
   const Component = asChild ? Slot : 'input';
 
   const { input } = inputVariants({
@@ -245,12 +245,16 @@ const InputEl = React.forwardRef<
     hasError,
   });
 
+  const isExplicitAutofill = autoComplete && autoComplete !== 'off';
+  const managerAttributes = isExplicitAutofill ? { autoComplete } : AUTOCOMPLETE_PASSWORD_MANAGERS_OFF;
+
   return (
     <Component
       type={type}
       className={input({ class: className })}
       ref={forwardedRef}
-      {...AUTOCOMPLETE_PASSWORD_MANAGERS_OFF}
+      name={name}
+      {...managerAttributes}
       {...rest}
     />
   );
