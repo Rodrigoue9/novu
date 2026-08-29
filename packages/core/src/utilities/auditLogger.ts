@@ -1,0 +1,1 @@
+export class AuditLogger { private events: any[] = []; log(event: any) { this.events.push({ ...event, ts: Date.now() }); } getEvents() { return [...this.events]; } }
