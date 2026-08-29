@@ -1,0 +1,1 @@
+export class ProviderCircuitBreaker { private failCount = 0; constructor(public threshold = 5) {} recordFailure() { this.failCount++; } isOpen() { return this.failCount >= this.threshold; } reset() { this.failCount = 0; } }
