@@ -1,0 +1,1 @@
+export function pickProvider(primaryAvail: boolean, primary: string, fallback: string): string { return primaryAvail ? primary : fallback; }
