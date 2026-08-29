@@ -1,0 +1,1 @@
+export function chunkSubscribers<T>(subs: T[], size = 100): T[][] { const res: T[][] = []; for (let i = 0; i < subs.length; i += size) res.push(subs.slice(i, i + size)); return res; }
