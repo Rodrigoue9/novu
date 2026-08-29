@@ -1,0 +1,1 @@
+export function normalizeStatus(rawStatus: string): 'delivered' | 'failed' | 'pending' { const s = rawStatus.toLowerCase(); if (s.includes('sent') || s.includes('delivered')) return 'delivered'; if (s.includes('fail') || s.includes('bounce')) return 'failed'; return 'pending'; }
