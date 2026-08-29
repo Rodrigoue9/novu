@@ -1,0 +1,1 @@
+export function isPayloadWithinLimit(payload: object, maxBytes = 4096): boolean { return Buffer.byteLength(JSON.stringify(payload)) <= maxBytes; }
