@@ -1,0 +1,1 @@
+export function isQuietHour(hour: number, start = 22, end = 8): boolean { if (start > end) return hour >= start || hour < end; return hour >= start && hour < end; }
