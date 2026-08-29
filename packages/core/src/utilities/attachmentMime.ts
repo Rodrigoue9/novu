@@ -1,0 +1,1 @@
+export function isAllowedAttachment(mime: string, allowlist: string[]): boolean { return allowlist.includes(mime); }
