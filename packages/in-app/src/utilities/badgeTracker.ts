@@ -1,0 +1,1 @@
+export class BadgeTracker { private counts = new Map<string, number>(); inc(subId: string) { this.counts.set(subId, (this.counts.get(subId) || 0) + 1); } get(subId: string) { return this.counts.get(subId) || 0; } reset(subId: string) { this.counts.delete(subId); } }
