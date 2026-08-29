@@ -1,0 +1,1 @@
+export function isValidCron(cron: string): boolean { return cron.trim().split(/\s+/).length === 5; }
