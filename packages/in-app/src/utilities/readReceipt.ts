@@ -1,0 +1,1 @@
+export class ReadReceiptTracker { private reads = new Map<string, number>(); markRead(msgId: string) { this.reads.set(msgId, Date.now()); } getReadTime(msgId: string) { return this.reads.get(msgId); } }
