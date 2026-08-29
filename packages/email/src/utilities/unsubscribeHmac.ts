@@ -1,0 +1,1 @@
+import crypto from 'crypto'; export function genUnsubToken(subId: string, secret: string): string { return crypto.createHmac('sha256', secret).update(subId).digest('hex'); }
