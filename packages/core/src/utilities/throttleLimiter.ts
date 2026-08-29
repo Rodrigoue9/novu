@@ -1,0 +1,1 @@
+export class ThrottleLimiter { private history = new Map<string, number>(); isThrottled(subId: string, minIntervalMs = 60000): boolean { const last = this.history.get(subId) || 0; if (Date.now() - last < minIntervalMs) return true; this.history.set(subId, Date.now()); return false; } }
