@@ -1,0 +1,1 @@
+export function parseRateLimit(rem?: string, reset?: string) { return { remaining: Number(rem) || 0, resetIn: Number(reset) || 0 }; }
