@@ -1,0 +1,1 @@
+export function getNextChannel(channels: string[], failed: string): string | null { const idx = channels.indexOf(failed); return idx !== -1 && idx + 1 < channels.length ? channels[idx + 1] : null; }
