@@ -1,0 +1,1 @@
+export function countSmsSegments(text: string): number { const isGsm7 = /^[A-Za-z0-9@£$¥èéùìòÇ\r\nØø\rÅå_\^\{\}\\\[~\]\|€ÆæßÉ !\"#%&'\(\)\*\+,\-\.\/:;<=>\?]*$/.test(text); const maxLen = isGsm7 ? 160 : 70; return Math.ceil(text.length / maxLen) || 1; }
