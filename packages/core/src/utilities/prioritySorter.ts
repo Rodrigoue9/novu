@@ -1,0 +1,1 @@
+export function sortByPriority<T extends { priority: number }>(items: T[]): T[] { return [...items].sort((a, b) => b.priority - a.priority); }
