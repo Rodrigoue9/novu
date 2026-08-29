@@ -1,0 +1,1 @@
+export function classifyBounce(code: number): 'hard' | 'soft' { return code >= 500 ? 'hard' : 'soft'; }
