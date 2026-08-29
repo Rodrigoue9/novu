@@ -1,0 +1,1 @@
+export function matchLocale(pref: string, supported: string[], def = 'en'): string { return supported.includes(pref) ? pref : def; }
