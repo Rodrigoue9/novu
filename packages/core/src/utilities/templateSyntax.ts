@@ -1,0 +1,1 @@
+export function validateBrackets(template: string): boolean { const opens = (template.match(/{{/g) || []).length; const closes = (template.match(/}}/g) || []).length; return opens === closes; }
